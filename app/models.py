@@ -1,14 +1,13 @@
-from sqlalchemy.orm import lazyload
 from . import db
 from flask_login import UserMixin
-import datetime
+from datetime import datetime
 
 class User(UserMixin, db.Model):
     __tablename__='users'
     user_id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
     email = db.Column(db.String(100))
-    role = db.Column(db.Integer, db.ForeignKey('roles.role_id'))
+    user_role = db.Column(db.Integer, db.ForeignKey('roles.role_id'))
     appointments = db.Column(db.Integer, db.ForeignKey('appointments.appointment_id'))
     posts_added = db.Column(db.Integer, db.ForeignKey('posts.post_id'))
 
@@ -23,7 +22,7 @@ class Post(db.Model):
     __tablename__='posts'
     post_id = db.Column(db.Integer, primary_key = True)
     post_title = db.Column(db.String(50))
-    house_price = db.Columne(db.String(255))
+    house_price = db.Column(db.String(255))
     house_location = db.Column(db.String(100))
     photo_path = db.Column(db.String())
     user = db.relationship('User', backref = 'posts', lazy='dynamic')
@@ -39,7 +38,7 @@ class Appointment(db.Model):
     __tablename__= 'appointments'
     appointment_id = db.Column(db.Integer, primary_key = True)
     appointment_title = db.Column(db.String(100))
-    appointment_content = db.COlumn(db.String(255))
+    appointment_content = db.Column(db.String(255))
     appointment_date = db.Column(db.DateTime())
     appointment_made_on = db.Column(db.DateTime(), default = datetime.utcnow)
     user = db.relationship('User', backref='appointment', lazy='dynamic')

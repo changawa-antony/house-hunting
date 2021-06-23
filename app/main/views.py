@@ -3,6 +3,7 @@ from flask import render_template, flash, redirect, url_for
 from flask_login import login_required
 from ..main.forms import BookApp
 from ..models import User, Appointment
+from .. import db
 
 @main.route('/')
 def index ():
@@ -10,7 +11,7 @@ def index ():
   return render_template('index.html')
 
 @main.route('/<user_id>/bookappointment')#add /<user_id> once authentication hase been added
-# @login_required #add login required as well
+@login_required #add login required as well
 def book_appointment(user_id):
   form = BookApp()
   user_select = User.query.filter_by(user_id = user_id).first()
