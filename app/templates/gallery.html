@@ -1,0 +1,113 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="main-wrapper bg-white" style="height: 950px;">
+    {% include 'nav2.html'%}
+    <div class="content-wrapper">
+        <div class="heading-sec">
+            <h1 class="page-header">
+                Collections
+            </h1>
+        </div>
+
+<!-- Gallery one -->
+        <div class="photo-album d-flex justify-content-center">
+
+            <div class="img-container col-3">
+                <div class="gallery-img">
+                    <img src="{{url_for('static',filename='/imags/img4.jpg')}}" alt="">
+                </div>
+
+                <a class="gallery-links" href="">
+                    <div class="gallery-img-text">
+                        <p>3 Bedroom mansion - Kileleshwa<br>
+                        <span>2.5M</span></p>
+                    </div>
+                </a>
+                
+            </div>
+
+            <div class="img-container col-3">
+                <div class="gallery-img">
+                    <img src="{{url_for('static',filename='/imags/img4.jpg')}}" alt="">
+                </div>
+
+                <a class="gallery-links" href="">
+                    <div class="gallery-img-text">
+                        <p>3 Bedroom mansion - Kileleshwa<br>
+                        <span>2.5M</span></p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="img-container col-3">
+                <div class="gallery-img">
+                    <img src="{{url_for('static',filename='/imags/img4.jpg')}}" alt="">
+                </div>
+
+                <a class="gallery-links" href="">
+                    <div class="gallery-img-text">
+                        <p>3 Bedroom mansion - Kileleshwa<br>
+                        <span>2.5M</span></p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+<!-- End of Gallery one -->
+
+<!-- Gallery two -->
+
+    <div class="photo-album d-flex justify-content-center">
+
+        <div class="img-container col-3">
+            <div class="gallery-img">
+                <img src="{{url_for('static',filename='/imags/img4.jpg')}}" alt="">
+            </div>
+
+            <a class="gallery-links" href="">
+                <div class="gallery-img-text">
+                    <p>3 Bedroom mansion - Kileleshwa<br>
+                    <span>2.5M</span></p>
+                </div>
+            </a>
+            
+        </div>
+
+        <div class="img-container col-3">
+            <div class="gallery-img">
+                <img src="{{url_for('static',filename='/imags/img4.jpg')}}" alt="">
+            </div>
+
+            <a class="gallery-links" href="">
+                <div class="gallery-img-text">
+                    <p>3 Bedroom mansion - Kileleshwa<br>
+                    <span>2.5M</span></p>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="img-container col-3">
+            <div class="gallery-img">
+                <img src="{{url_for('static',filename='/imags/img4.jpg')}}" alt="">
+            </div>
+
+            <a class="gallery-links" href="">
+                <div class="gallery-img-text">
+                    <p>3 Bedroom mansion - Kileleshwa<br>
+                    <span>2.5M</span></p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+<!-- End of Gallery two -->
+        
+    </div>
+</div>
+{% include 'contact.html'%}
+
+{% endblock %}

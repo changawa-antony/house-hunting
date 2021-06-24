@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div class="main-wrapper">
+    {% include 'nav2.html'%}
+
+    <div class="content-holder bg-white">
+        <div class="heading-sec">
+            <h1 class="page-header">
+                Are you selling a house?
+            </h1>
+        </div>
+    
+        <div class="main-content d-flex">
+            <div class="image-holder col-7 ">
+                <div class="image text-center">
+                    <img src="{{url_for('static',filename='/imags/img3.jpg')}}" alt="">
+                </div>
+
+                <div class="img-text">
+                    <p>Mansions/Commercial buildings/Appartments<br>
+                
+                </div>
+
+                <div class="page-des text-center">
+                    <p>Get in touch with us and get a space on our website.</p>
+                </div>
+
+                
+            </div>
+    
+            <div class="form-holder col-4">
+                <div class="form p-5 bg-light" style="height: 800px; padding-bottom: 30px;">
+                    <h2 class="form-header text-center">Register with Us</h2>
+                    <form class="form-create p-5"> 
+        
+                        <div class="form-group mb-3 p-2">
+                            <label for="exampleInputUsername">Name</label>
+                            <input type="name" class="form-control bg" id="name" placeholder="name" style="background-color: rgb(197, 197, 197);">
+                        </div>
+
+                        <div class="form-group mb-3 p-2">
+                            <label for="exampleInputnumber">Your Mobile Number</label>
+                            <input type="text" class="form-control bg" id="number" placeholder="Phone number" style="background-color: rgb(197, 197, 197);">
+                        </div>
+        
+                        <div class="form-group mb-3 p-2">
+                          <label for="exampleInputEmail1">Your Email</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="background-color: rgb(197, 197, 197);">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+        
+                        <div class="button p-2">
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        </div>
+                        
+                      </form>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+{% include 'contact.html'%}
+
+
+{% endblock %}
