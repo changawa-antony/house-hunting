@@ -1,22 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="navbar-brand text-secondary font-weight-bolder" href="#">House-hant</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav text-light">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/gallery">Gallery</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/appointment">Appointments</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sell">Sell</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <a class="navbar-brand text-secondary font-weight-bolder" href="#">House-hant</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav text-light">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/gallery">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/appointment">Appointments</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sell">Sell</a>
+      </li>
+      {%if current_user.is_authenticated%}
+      <li class="nav-item">
+        <span class="bg-primary">{{current_user.username}}</span>
+        <a class="nav-link" href="{{url_for('auth.logout')}}">Logout</a>
+      </li>
+      {%else%}
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('auth.login')}}">Login</a>
+      </li>
+      {%endif%}
+    </ul>
+  </div>
+</nav>

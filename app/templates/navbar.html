@@ -12,11 +12,20 @@
           <a class="nav-link" href="/gallery">Gallery</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/appointment">Appointments</a>
+            <a class="nav-link" href="{{url_for()}}">Appointments</a>
           </li>
         <li class="nav-item">
           <a class="nav-link" href="/sell">Sell</a>
         </li>
+        {%if current_user.is_authenticated%}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('auth.logout')}}">Logout</a>
+        </li>
+        {%else%}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('auth.login')}}">Login</a>
+        </li>
+        {%endif%}
       </ul>
     </div>
   </nav>

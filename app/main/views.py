@@ -7,23 +7,6 @@ from ..models import User, Appointment
 from .. import db
 
 
-@main.route('/')
-def index():
-      
-  return render_template('index.html')
-
-
-@main.route('/login')
-@login_required
-def login ():
-  return render_template('login.index')
-
-@main.route('/')
-def index():
-  
-  return render_template('index.html')
-
-
 @main.route('/sell')
 def sell():
       
@@ -35,13 +18,6 @@ def gallery():
       
       
   return render_template('gallery.html')
-
-
-@main.route('/login')
-@login_required
-def login ():
-      
-  return render_template('login.html')
 
 
 @main.route('/<user_id>/appointment')#add /<user_id> once authentication hase been added
