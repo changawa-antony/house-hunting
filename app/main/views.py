@@ -1,12 +1,13 @@
 from flask.helpers import url_for
 from . import main
 from flask import render_template
+from flask_login import login_user ,logout_user, login_required
 
 @main.route('/')
 def index():
       
-      
   return render_template('index.html')
+      
 
 @main.route('/appointment')
 def appointment():
@@ -25,3 +26,9 @@ def gallery():
       
       
   return render_template('gallery.html')
+
+@main.route('/login')
+@login_required
+def login ():
+      
+  return render_template('login.html')
