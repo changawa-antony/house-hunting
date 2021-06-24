@@ -5,6 +5,7 @@ from flask import render_template, flash, redirect, url_for
 from ..main.forms import BookApp
 from ..models import User, Appointment
 from .. import db
+import datetime
 
 
 @main.route('/sell')
@@ -30,7 +31,8 @@ def book_appointment(user_id):
   if form.validate_on_submit():
     title = form.aptmnt_title.data
     content = form.aptmnt_content.data
-    when = form.aptmnt_when.data
+    y,m,d = form.date.data.split('/')
+    when = datetime.datetime(int(y), int(m), int(d))
 
     appointment = Appointment(appointment_title = title, appointment_content = content, appointment_date = when, user = user_id)
 
@@ -43,4 +45,4 @@ def book_appointment(user_id):
 
 
   
-  return render_template('appointment.html', title = 'Book Appointment')
+  return render_template('appointment.html', title = 'Book Appointment', form = form)
