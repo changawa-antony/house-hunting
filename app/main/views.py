@@ -11,11 +11,18 @@ from .. import db
 def index():
       
   return render_template('index.html')
-# @main.route('/appointment')
-# def appointment():
-      
-      
-  # return render_template('appointment.html')
+
+
+@main.route('/login')
+@login_required
+def login ():
+  return render_template('login.index')
+
+@main.route('/')
+def index():
+  
+  return render_template('index.html')
+
 
 @main.route('/sell')
 def sell():
