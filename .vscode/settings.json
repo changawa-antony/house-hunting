@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "virtual/bin/python"
+=======
+  "python.pythonPath": "venv/bin/python"
+>>>>>>> 95bcf1bbd695078732e3ac32585d0e13f8ee5299
 }
