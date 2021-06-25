@@ -33,7 +33,7 @@ def book_appointment(user_id):
     content = form.aptmnt_content.data
     input = str(form.aptmnt_when.data)
 
-    appointment = Appointment(appointment_title = title, appointment_content = content, appointment_date = '2021-2-12')
+    appointment = Appointment(appointment_title = title, appointment_content = content, appointment_date = input)
     db.session.add(appointment)
     db.session.commit()
 
