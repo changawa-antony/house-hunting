@@ -1,4 +1,5 @@
 {% extends 'base.html'%}
+{%import 'bootstrap/wtf.html' as wtf%}
 {% block content%}
 {% include 'navbar.html'%}
 <div class="container-fluid d-flex homepage-wrapper">
@@ -13,7 +14,9 @@
     <div class="col-4">
         <div class="form p-5 bg-light" style="height: 800px;">
             <h2 class="form-header text-center">Create an Account</h2>
-            <form class="form-create p-5"> 
+
+            <a href="/register"><button class="btn btn-primary ml-1">REGISTER HERE</button></a>
+            <!-- <form class="form-create p-5"> 
 
                 <div class="form-group mb-3 p-2">
                     <label for="exampleInputUsername">Username</label>
@@ -40,7 +43,7 @@
                     <button type="submit" class="btn btn-primary mr-2">Create</button>
                 </div>
                 
-              </form>
+              </form> -->
         </div>
     </div>
 </div>
