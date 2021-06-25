@@ -25,9 +25,32 @@ body{
     background-color: rgba(202, 201, 201, 0.493);
     margin-right: 15px;
 }
-
+.bannere{
+    backdrop-filter: blur(5px);
+    border: 1px solid white;
+}
+.lead{
+    background-color: rgba(99, 75, 11, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(3px);
+    box-shadow: 1px 1px 1px 1px rgb(41, 31, 4);  
+}
+.statement>a{
+    color: rgb(99, 75, 11);
+    text-decoration: none;
+}
+.formReg{
+    background-color: rgb(248, 248, 248);
+    color: white;
+}
+.statement>a:hover{
+    color: rgb(41, 31, 4);
+    text-decoration: underline;
+    text-transform: uppercase;
+}
 .form{
-    color: grey;
+    color: rgb(41, 31, 4);
+    border-radius: 10px;
 }
 
 a{

@@ -5,7 +5,7 @@
 {% include 'navbar.html'%}
 <div class="container-fluid d-flex homepage-wrapper">
   <div class="col-8">
-    <div class="jumbotron jumbotron-fluid text-center p-4 text-light" style="margin-top: 330px;">
+    <div class="jumbotron bannere jumbotron-fluid text-center p-4 text-light" style="margin-top: 330px;">
       <div class="container">
         <h1 class="display-3 font-weight-bold">House hunting made easier</h1>
         <p class="lead">Create an account to see more...</p>
@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="col-4">
-    <div class="form p-5 bg-light" style="height: 800px;">
+    <div class="form p-5 formReg" style="height: 800px;">
       <h2 class="form-header text-center">Create an Account</h2>
       <div class="container">
         <div class="row">
@@ -21,7 +21,7 @@
           <div class="col-md-8">
 
             {{wtf.quick_form(registration_form)}}
-
+            <p class="statement">Already have an account <a href="{{url_for('auth.login')}}">Login Here</a></p>
           </div>
           <div class="col-md-2"></div>
         </div>
