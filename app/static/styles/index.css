@@ -149,3 +149,18 @@ a.gallery-links:hover{
     border-right: none;
     border-radius: 6px 0 0 6px;
 }
+.navbg{
+    background-color: rgb(63,134,156);
+    display: flex;
+    flex-direction: row;
+}
+.bnt{
+    background-image: radial-gradient(rgb(59, 192, 245),rgb(42,164,213));
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid white;
+
+}
+.navbar-brand{
+    color: rgb(99, 75, 11);
+}
